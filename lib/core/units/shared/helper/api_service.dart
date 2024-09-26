@@ -11,18 +11,20 @@ import 'package:comamarce/features/authentication/data/models/signup_model/signu
 import 'package:comamarce/features/authentication/data/models/verify_token/verify_token_response.dart';
 import 'package:comamarce/features/cart/presentation/data/model/cart_response_model.dart';
 import 'package:comamarce/features/cart/presentation/data/model/cart_update_id_response.dart';
-import 'package:comamarce/features/favorite_view/data/model/add_favorite/add_favorite_requist.dart';
-import 'package:comamarce/features/favorite_view/data/model/add_favorite/add_favourite_response.dart';
-import 'package:comamarce/features/home/data/model/add_product_to_cart_response/add_product_request.dart';
-import 'package:comamarce/features/home/data/model/add_product_to_cart_response/add_product_to_cart_response.dart';
-import 'package:comamarce/features/home/data/model/home_category_response.dart';
-import 'package:comamarce/features/home/data/model/product_response_model/product_response.dart';
-import 'package:comamarce/features/order_view/data/model/chash_order_response/cash_order_request.dart';
-import 'package:comamarce/features/order_view/data/model/chash_order_response/cash_order_response.dart';
+
+import 'package:comamarce/features/nav_bar_home/data/model/add_product_to_cart_response/add_product_request.dart';
+import 'package:comamarce/features/nav_bar_home/data/model/add_product_to_cart_response/add_product_to_cart_response.dart';
+import 'package:comamarce/features/nav_bar_home/data/model/home_category_response.dart';
+import 'package:comamarce/features/nav_bar_home/data/model/product_response_model/product_response.dart';
+
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:talker_dio_logger/talker_dio_logger_interceptor.dart';
+
+import '../../../../features/nav_bar_home/data/model/add_favorite/add_favorite_requist.dart';
+import '../../../../features/nav_bar_home/data/model/add_favorite/add_favourite_response.dart';
+import '../../../../features/nav_bar_home/data/model/chash_order_response/cash_order_request.dart';
+import '../../../../features/nav_bar_home/data/model/chash_order_response/cash_order_response.dart';
 
 part 'api_service.g.dart';
 
@@ -85,56 +87,5 @@ abstract class ApiService {
   Future<List<CashOrderResponse>> getOrders(@Path('id')String id);
 }
 
-// @RestApi(baseUrl: 'https://ecommerce.routemisr.com')
-// abstract class StripeService{
-//   factory StripeService(Dio dio, {String baseUrl}) = _StripeService;
 
-
-
-
-// final _baseUrl='';
-// final  Dio dio=Dio();
-// Future<Map<String,dynamic>> postData ({required String endPoint,required  data,String? token})async{
-//   var response=await dio.post(
-//       '$_baseUrl$endPoint',
-//       data: data,
-//       options: Options(
-//           headers: {
-//             'Authorization': 'Bearer Token $token'
-//           }
-//       )
-//   );
-//
-//   return response.data;
-// }
-// Future<Map<String,dynamic>> getData ({required String endPoint,String? token})async{
-//   dio.interceptors.addAll([
-//     TalkerDioLogger(),
-//   ]);
-//   Response response =await dio .get(
-//       '$_baseUrl$endPoint',
-//       options: Options(
-//           headers: {
-//             'Authorization': 'Bearer Token $token'
-//           }
-//       )
-//   );
-//   return response.data;
-// }
-//
-// Future<Response> stripePost ({Map<String,String>?headers,required String url,required  data,required String token,String? contentType})async{
-//   var response=await dio.post(
-//     url,
-//     data: data,
-//     options: Options(
-//       // contentType: Headers.formUrlEncodedContentType,
-//       headers: headers?? {
-//         'Authorization':"Bearer $token"
-//       },
-//     ),
-//   );
-//
-//   return response;
-// }
-//
 

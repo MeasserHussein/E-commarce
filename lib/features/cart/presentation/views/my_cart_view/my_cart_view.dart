@@ -18,7 +18,11 @@ class MyCartView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: CustomAppBar(
-
+leading: GestureDetector(
+  onTap: (){
+    context.pop();
+  },
+    child: Icon(Icons.arrow_back_rounded)),
           text: 'My Card',
         ),
         body: BlocBuilder<CartItemCubit, CartItemState>(

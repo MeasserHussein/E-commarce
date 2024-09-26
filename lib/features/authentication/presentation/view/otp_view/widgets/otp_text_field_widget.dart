@@ -1,6 +1,7 @@
 import 'package:comamarce/core/widgets/text_button.dart';
 import 'package:comamarce/features/authentication/presentation/manager/cubit/login_cubit.dart';
 import 'package:comamarce/features/authentication/presentation/manager/otp_cubit/otp_code_cubit.dart';
+import 'package:comamarce/features/authentication/presentation/manager/otp_cubit/otp_code_state.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,6 +23,8 @@ class _OtpTextFieldWidgetState extends State<OtpTextFieldWidget> {
   @override
   Widget build(BuildContext context) {
     var cubit =context.read<OtpCodeCubit>();
+    return BlocBuilder<OtpCodeCubit, OtpCodeState>(
+  builder: (context, state) {
     return Column(
       children: [
         OtpTextField(
@@ -62,5 +65,7 @@ class _OtpTextFieldWidgetState extends State<OtpTextFieldWidget> {
         )
       ],
     );
+  },
+);
   }
 }

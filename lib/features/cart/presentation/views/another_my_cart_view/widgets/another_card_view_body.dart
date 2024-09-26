@@ -4,8 +4,6 @@ import 'package:comamarce/features/cart/presentation/views/my_cart_view/widgets/
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../home_view/data/grid_item_model.dart';
 import 'anothet_card_list_view.dart';
 import '../../my_cart_view/widgets/custom_button.dart';
 import '../../my_cart_view/widgets/featured_card_items.dart';

@@ -1,14 +1,14 @@
+import 'package:comamarce/features/cart/presentation/data/model/cart_response_model.dart';
 import 'package:comamarce/features/payment/presentation/views/widgets/payment_methods_list_view.dart';
 import 'package:flutter/material.dart';
-import '../../../../home_view/data/grid_item_model.dart';
 import 'custom_button_bloc_consumer.dart';
 
 
 
 
 class PaymentMethodBottomSheet extends StatelessWidget {
-  const PaymentMethodBottomSheet({super.key, required this.items});
-  final GridItemModel items;
+  const PaymentMethodBottomSheet({super.key, required this.cartResponseModel});
+final CartResponseModel cartResponseModel;
   @override
   Widget build(BuildContext context) {
     return  Padding(
@@ -23,7 +23,7 @@ class PaymentMethodBottomSheet extends StatelessWidget {
           const SizedBox(
             height: 32,
           ),
-         CustomButtonBlocConsumer(items:items,),
+         CustomButtonBlocConsumer(cartResponseModel:cartResponseModel ,),
         ],
       ),
     );

@@ -15,7 +15,7 @@ class AppRoute {
 
   static const String categoryItem = '/categoryItem';
 
-  static const String home = '/home';
+  static const String home = '/nav_bar_home';
 
   static const String detailsView = '/detailsView';
 

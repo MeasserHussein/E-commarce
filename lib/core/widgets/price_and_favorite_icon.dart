@@ -1,7 +1,7 @@
 import 'package:comamarce/core/units/app_colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../features/home_view/presentation/views/widgets/app_favorite_icon.dart';
+import '../../features/details_view/presentation/views/widgets/app_favorite_icon.dart';
 import '../units/styles.dart';
 
 class PriceAndFavoriteIcon extends StatelessWidget {

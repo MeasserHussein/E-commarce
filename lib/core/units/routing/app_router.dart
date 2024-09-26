@@ -8,33 +8,30 @@ import 'package:comamarce/features/authentication/presentation/manager/signup_cu
 import 'package:comamarce/features/authentication/presentation/view/change_new_password_view/change_password_view.dart';
 import 'package:comamarce/features/authentication/presentation/view/manager_login_view/manager_login_view.dart';
 import 'package:comamarce/features/authentication/presentation/view/otp_view/otp_view.dart';
-import 'package:comamarce/features/cart/presentation/data/model/cart_response_model.dart';
 import 'package:comamarce/features/cart/presentation/views/manager/cart_cubit/cart_cubit.dart';
-import 'package:comamarce/features/favorite_view/presentation/manager/favorite_cubit.dart';
-import 'package:comamarce/features/home/data/model/home_category_response.dart';
-import 'package:comamarce/features/home/data/model/product_response_model/product_response.dart';
-import 'package:comamarce/features/home/presentation/manager/brands_cubit/brands_cubit.dart';
-import 'package:comamarce/features/home/presentation/manager/category_items_cubit/category_items_cubit.dart';
-import 'package:comamarce/features/home/presentation/manager/home_category_cubit/home_category_cubit.dart';
-import 'package:comamarce/features/home/presentation/manager/product_cubit/add_to_cart_cubit/add_to_cart_cubit.dart';
-import 'package:comamarce/features/home/presentation/manager/product_cubit/product_cubit.dart';
-import 'package:comamarce/features/home/presentation/view/category_item_list_view/view/category_items_list_view.dart';
+import 'package:comamarce/features/details_view/presentation/views/details_view.dart';
 import 'package:comamarce/features/cart/presentation/views/another_my_cart_view/anther_card_view.dart';
-import 'package:comamarce/features/order_view/data/model/chash_order_response/cash_order_response.dart';
-import 'package:comamarce/features/order_view/presentation/manager/cash_order_cubit/cash_order_cubit.dart';
-import 'package:comamarce/features/review_view/presentation/view/widgets/review_view.dart';
+import 'package:comamarce/features/nav_bar_home/data/model/home_category_response.dart';
+import 'package:comamarce/features/nav_bar_home/data/model/product_response_model/product_response.dart';
+import 'package:comamarce/features/nav_bar_home/presentation/manager/category_items_cubit/category_items_cubit.dart';
+import 'package:comamarce/features/nav_bar_home/presentation/manager/home_category_cubit/home_category_cubit.dart';
+import 'package:comamarce/features/nav_bar_home/presentation/view/category_item_list_view/view/category_items_list_view.dart';
 import 'package:comamarce/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../../features/authentication/presentation/view/forget_password_view/forget_password_view.dart';
 import '../../../features/authentication/presentation/view/login_view/login_view.dart';
 import '../../../features/authentication/presentation/view/register_view/register_view.dart';
-import '../../../features/favorite_view/presentation/views/favorite_view.dart';
-import '../../../features/home_view/presentation/views/details_view.dart';
-import '../../../features/home_view/presentation/views/home_buttom_nav_bar.dart';
-import '../../../features/my_account/presentation/views/my_account_view.dart';
-import '../../../features/order_view/presentation/views/order_view.dart';
+import '../../../features/nav_bar_home/data/model/chash_order_response/cash_order_response.dart';
+import '../../../features/nav_bar_home/presentation/manager/brands_cubit/brands_cubit.dart';
+import '../../../features/nav_bar_home/presentation/manager/cash_order_cubit/cash_order_cubit.dart';
+import '../../../features/nav_bar_home/presentation/manager/favorite_cubit/favorite_cubit.dart';
+import '../../../features/nav_bar_home/presentation/manager/product_cubit/add_to_cart_cubit/add_to_cart_cubit.dart';
+import '../../../features/nav_bar_home/presentation/manager/product_cubit/product_cubit.dart';
+import '../../../features/nav_bar_home/presentation/view/favorite_view/presentation/views/favorite_view.dart';
+import '../../../features/nav_bar_home/presentation/view/home_nav_bar/view/home_buttom_nav_bar.dart';
 import '../../../features/cart/presentation/views/my_cart_view/my_cart_view.dart';
+import '../../../features/nav_bar_home/presentation/view/my_account/presentation/views/my_account_view.dart';
 import '../../../features/payment/presentation/views/payment_details_view.dart';
 import '../../../features/payment/presentation/views/thank_you_view.dart';
 import '../../../features/setting_profile_view/presentation/view/setting_profile_view.dart';
@@ -167,9 +164,6 @@ class AppRouter {
       GoRoute(
           path: AppRoute.thankYou,
           builder: (context, state) => const ThankYouView()),
-      GoRoute(
-          path: AppRoute.review,
-          builder: (context, state) => const ReviewView()),
       GoRoute(
         path: AppRoute.categoryItem,
         builder: (context, state) => BlocProvider(

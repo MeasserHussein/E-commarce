@@ -4,6 +4,7 @@ import 'package:comamarce/features/authentication/presentation/manager/forget_pa
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../../core/units/app_colors.dart';
 import '../../../../../../core/units/styles.dart';
@@ -40,8 +41,8 @@ class ForgetEnterEmailWidget extends StatelessWidget {
                 hintText: 'Enter Email',
                 keyboardType: TextInputType.emailAddress,
               ),
-              const SizedBox(
-                height: 20,
+               SizedBox(
+                height: 20.h,
               ),
               Row(
                 children: [
@@ -57,7 +58,7 @@ class ForgetEnterEmailWidget extends StatelessWidget {
                          backgroundColor: AppColors.primaryBlueColor,
                        ),
                      ),
-                     fallback: (context)=>const CircularProgressIndicator()
+                     fallback: (context)=>const Expanded(child: Center(child: CircularProgressIndicator(color: AppColors.primaryBlueColor,)))
                  )
                 ],
               ),

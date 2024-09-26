@@ -11,16 +11,15 @@ import 'package:comamarce/features/authentication/presentation/manager/forget_pa
 import 'package:comamarce/features/authentication/presentation/manager/otp_cubit/otp_code_cubit.dart';
 import 'package:comamarce/features/authentication/presentation/manager/signup_cubit/signup_cubit.dart';
 import 'package:comamarce/features/cart/presentation/data/repo/cart_repo.dart';
-import 'package:comamarce/features/order_view/data/repo/cash_oreder_repo.dart';
-import 'package:comamarce/features/favorite_view/data/repo/favorite_repo.dart';
-import 'package:comamarce/features/home/data/repo/category_item_repo/Category_item_repo.dart';
-import 'package:comamarce/features/home/data/repo/home_category_repo/home_category_repo.dart';
-import 'package:comamarce/features/home/data/repo/product_repo/product_repo.dart';
-import 'package:comamarce/features/home/presentation/manager/product_cubit/add_to_cart_cubit/add_to_cart_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-
 import '../../features/authentication/data/repos/login_repo.dart';
+import '../../features/nav_bar_home/data/repo/cash_order_repo/cash_oreder_repo.dart';
+import '../../features/nav_bar_home/data/repo/category_item_repo/Category_item_repo.dart';
+import '../../features/nav_bar_home/data/repo/favorite_repo/favorite_repo.dart';
+import '../../features/nav_bar_home/data/repo/home_category_repo/home_category_repo.dart';
+import '../../features/nav_bar_home/data/repo/product_repo/product_repo.dart';
+import '../../features/nav_bar_home/presentation/manager/product_cubit/add_to_cart_cubit/add_to_cart_cubit.dart';
 
 final getIt =GetIt.instance;
 
@@ -47,7 +46,7 @@ Future<void> setupGetIt() async{
   getIt.registerLazySingleton<ChangePasswordRepo>(()=>ChangePasswordRepo(getIt()));
   getIt.registerFactory<ChangePasswordCubit>(()=>ChangePasswordCubit(getIt()));
 
-  //home category
+  //nav_bar_home category
   getIt.registerLazySingleton<HomeCategoryRepo>(()=>HomeCategoryRepo(getIt()));
 
   //product

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../core/units/app_colors.dart';
 import '../../../../../../core/units/styles.dart';
@@ -14,20 +15,20 @@ class ForgetPasswordBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding:  EdgeInsets.symmetric(horizontal: 20.0.w),
         child: DesignAuthContainer(
           color: Colors.white,
           widget: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 10,),
+                 SizedBox(height: 10.h,),
                 Image.asset(
                   'assets/images/forget.jpg',
-                  width: 200,
+                  width: 200.w,
                 ),
-                const SizedBox(
-                  height: 30,
+                 SizedBox(
+                  height: 30.h,
                 ),
                 Text(
                     textAlign: TextAlign.center,
@@ -35,12 +36,12 @@ class ForgetPasswordBody extends StatelessWidget {
                     style: Styles.textStyle24w600.copyWith(
                       color: AppColors.primaryBlueColor,
                     )),
-                const SizedBox(
-                  height: 20,
+                 SizedBox(
+                  height: 20.h,
                 ),
                 const ForgetEnterEmailWidget(),
-                const SizedBox(
-                  height: 60,
+                 SizedBox(
+                  height: 60.h,
                 )
               ],
             ),

@@ -1,8 +1,6 @@
 import 'package:animated_rating_stars/animated_rating_stars.dart';
-import 'package:comamarce/features/home/data/model/product_response_model/product_response.dart';
+import 'package:comamarce/features/nav_bar_home/data/model/product_response_model/product_response.dart';
 import 'package:flutter/material.dart';
-
-import '../../features/home_view/data/grid_item_model.dart';
 
 class AnimatedRating extends StatelessWidget {
   const AnimatedRating({super.key, this.size = 20.0, required this.data,});

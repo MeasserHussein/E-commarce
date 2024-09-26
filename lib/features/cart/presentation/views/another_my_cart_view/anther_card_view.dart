@@ -1,10 +1,7 @@
 import 'package:comamarce/core/units/app_colors.dart';
 import 'package:comamarce/core/units/routing/app_routes.dart';
-import 'package:comamarce/core/units/shared/app_state_cubit/app_state_cubit.dart';
-import 'package:comamarce/core/units/shared/helper/constant.dart';
 import 'package:comamarce/core/units/styles.dart';
 import 'package:comamarce/core/widgets/appbar_widget.dart';
-import 'package:comamarce/features/cart/presentation/data/model/cart_response_model.dart';
 import 'package:comamarce/features/cart/presentation/views/another_my_cart_view/widgets/another_card_view_body.dart';
 import 'package:comamarce/features/cart/presentation/views/manager/cart_cubit/cart_cubit.dart';
 import 'package:comamarce/features/cart/presentation/views/manager/cart_cubit/cart_state.dart';
@@ -12,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../home_view/data/grid_item_model.dart';
 
 class AntherCardView extends StatelessWidget {
   const AntherCardView({super.key});
@@ -21,6 +17,11 @@ class AntherCardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: CustomAppBar(
+          leading: GestureDetector(
+            onTap: (){
+              context.pop();
+            },
+              child: const Icon(Icons.arrow_back_outlined)),
           text: 'My Card',
         ),
         body: BlocBuilder<CartItemCubit, CartItemState>(

@@ -20,9 +20,6 @@ class LoginBlocBuilder extends StatelessWidget {
         return const TextFormFieldWidget();
       },
       listener: (context,state){
-        if(state is SuccessAction){
-          cubit.isObscureText=!cubit.isObscureText;
-        }
         if(state is LoginSuccess){
           context.go(AppRoute.home);
         }

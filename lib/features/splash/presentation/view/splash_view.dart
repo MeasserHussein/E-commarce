@@ -4,6 +4,7 @@ import 'package:comamarce/core/units/app_colors.dart';
 import 'package:comamarce/core/units/routing/app_routes.dart';
 import 'package:comamarce/core/units/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 
@@ -39,9 +40,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void initialSlidingAnimation() {
     animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+        AnimationController(vsync: this, duration: const Duration(seconds: 2));
     slidingAnimation =
-        Tween<Offset>(begin: const Offset(0, 20), end: Offset.zero)
+        Tween<Offset>(begin:  Offset(0, 20.h), end: Offset.zero)
             .animate(animationController);
     animationController.forward();
   }
@@ -59,14 +60,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
             builder: (context, _) {
               return SlideTransition(
                 position: slidingAnimation,
-                child:  Column(
+                child:  const Column(
                   children: [
                     Text(
                       'Welcome to Logo',
                       textAlign: TextAlign.center,
-                      style: Styles.textStyle25.copyWith(color: AppColors.primaryBlueColor,decoration:TextDecoration.overline),
+                      style: TextStyle(color: AppColors.primaryBlueColor,fontSize: 25,decoration: TextDecoration.overline),
                     ),
-                    const Text(
+                    Text(
                       'FUTURE OF FASHION SEARCH',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: AppColors.primaryBlueColor,fontSize: 12),

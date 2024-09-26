@@ -38,7 +38,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginCubit extends Cubit<LoginState> {
-  LoginCubit(this.loginRepo) : super(const LoginState.initial());
+  LoginCubit(this.loginRepo) : super(LoginInitial());
   final LoginRepo loginRepo;
 
   final formKey = GlobalKey<FormState>();
@@ -51,27 +51,26 @@ class LoginCubit extends Cubit<LoginState> {
 
   void login(LoginRequestBody user) async {
     isLoading = true;
-    emit(const LoginState.loginLoading());
+    emit(LoginLoading());
     var response = await loginRepo.loginUser(user);
     response.when(success: (loginResponse) async{
       await saveUserToken(loginResponse.token!);
       isLoading = false;
-      emit(LoginState.loginSuccess(loginResponse));
+      emit(LoginSuccess(loginResponse: loginResponse));
     }, failure: (error) {
       isLoading = false;
-      emit(LoginState.loginError(error: error.failure.message ?? 'hello'));
+      emit(LoginError(error: error.failure.message ?? 'hello'));
     });
   }
 
   void getToken(String token ) async {
-    emit(const LoginState.loginLoading());
     token =await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
     var response = await loginRepo.verifyToken(token);
     response.when(success: (loginResponse) async{
       await saveUserId(loginResponse.decoded!.id!);
-      emit(LoginState.verifyTokenSuccess(loginResponse));
+      emit(VerifyTokenSuccess(data: loginResponse));
     }, failure: (error) {
-      emit(LoginState.loginError(error: error.failure.message ?? 'hello'));
+      emit(LoginError(error: error.failure.message ?? 'hello'));
     });
   }
 
@@ -97,7 +96,7 @@ class LoginCubit extends Cubit<LoginState> {
 
   void actionPassword(){
     isObscureText = !isObscureText;
-    emit( LoginState.successAction(s: isObscureText));
+    emit( SuccessAction());
   }
 
 }

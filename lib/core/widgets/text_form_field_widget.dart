@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../units/app_colors.dart';
 
@@ -75,7 +76,7 @@ class AppTextFormField extends StatelessWidget {
       ),
       keyboardType: keyboardType,
       validator: validator,
-      scrollPadding: const EdgeInsets.only(bottom: 150),
+      scrollPadding:  EdgeInsets.only(bottom:150.h),
     );
   }
 

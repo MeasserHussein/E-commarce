@@ -1,0 +1,35 @@
+
+import 'package:comamarce/core/units/app_colors.dart';
+import 'package:comamarce/core/widgets/appbar_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../../../core/units/routing/app_routes.dart';
+import 'widgets/favorite_view_body.dart';
+
+
+class FavoriteView extends StatelessWidget {
+  const FavoriteView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      appBar: CustomAppBar(
+        image: Image.asset('assets/icons/cart.png',color: AppColors.primaryBlueColor,),
+        text: 'Favorite',
+        onPressed: (){
+          context.push(AppRoute.myCart);
+        }
+      ),
+      body:const FavoriteViewBody(),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+

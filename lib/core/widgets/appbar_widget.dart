@@ -1,9 +1,6 @@
 import 'package:comamarce/core/units/app_colors.dart';
-import 'package:comamarce/features/payment/presentation/manager/cart_cubit/cart_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import '../units/styles.dart';
-import 'package:badges/badges.dart' as badges;
 
 AppBar CustomAppBar({
   String? text,

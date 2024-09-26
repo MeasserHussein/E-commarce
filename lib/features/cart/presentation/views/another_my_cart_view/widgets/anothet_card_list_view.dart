@@ -1,7 +1,5 @@
 import 'package:comamarce/features/cart/presentation/data/model/cart_response_model.dart';
 import 'package:comamarce/features/cart/presentation/views/another_my_cart_view/widgets/featured_another_card.dart';
-import 'package:comamarce/features/home_view/data/grid_item_model.dart';
-import 'package:comamarce/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

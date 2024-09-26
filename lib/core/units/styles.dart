@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-abstract class Styles{
+ class Styles{
   static TextStyle textStyle18w600 = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.w600,
