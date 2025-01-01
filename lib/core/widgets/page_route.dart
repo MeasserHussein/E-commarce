@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../features/no_internet_niew/no_internet_view.dart';
 
 class AnimatedNoInternetView extends StatefulWidget {
   final Widget child;

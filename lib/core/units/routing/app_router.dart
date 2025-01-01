@@ -34,7 +34,7 @@ import '../../../features/nav_bar_home/presentation/view/favorite_view/presentat
 import '../../../features/nav_bar_home/presentation/view/home_nav_bar/view/home_buttom_nav_bar.dart';
 import '../../../features/cart/presentation/views/my_cart_view/my_cart_view.dart';
 import '../../../features/nav_bar_home/presentation/view/my_account/presentation/views/my_account_view.dart';
-import '../../../features/no_internet_niew/no_internet_view.dart';
+import '../../../features/no_internet_view/no_internet_view.dart';
 import '../../../features/payment/presentation/views/thank_you_view.dart';
 import '../../../features/setting_profile_view/presentation/view/setting_profile_view.dart';
 import '../../widgets/page_route.dart';

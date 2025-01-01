@@ -1,12 +1,8 @@
 import 'dart:async';
 
 import 'package:comamarce/core/units/app_colors.dart';
-import 'package:comamarce/core/units/routing/app_router.dart';
 import 'package:comamarce/core/units/routing/app_routes.dart';
 import 'package:comamarce/core/units/shared/helper/constant.dart';
-import 'package:comamarce/core/units/styles.dart';
-import 'package:comamarce/features/no_internet_niew/no_internet_view.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
