@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 part 'home_category_response.g.dart';
 @JsonSerializable()
 class HomeCategoryAndBrandsResponse{
@@ -12,14 +13,33 @@ factory HomeCategoryAndBrandsResponse.fromJson(Map<String, dynamic> json) =>
 }
 
 @JsonSerializable()
+
 class DataCategory{
   @JsonKey(name: '_id')
+
   final String? id;
+
+
+
   final String? image;
+
+
+
   final String? name;
+
+
+
   final String? slug;
+
+
+
   final String? createdAt;
+
+
+
   final String? updatedAt;
+
+
 
   DataCategory(this.id, this.image, this.name, this.slug, this.createdAt, this.updatedAt);
 

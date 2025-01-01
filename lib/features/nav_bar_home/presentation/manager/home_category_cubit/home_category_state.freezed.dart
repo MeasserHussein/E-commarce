@@ -89,6 +89,9 @@ class _$HomeCategoryStateCopyWithImpl<T, $Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HomeCategoryState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -105,6 +108,9 @@ class __$$InitialImplCopyWithImpl<T, $Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeCategoryState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -224,6 +230,9 @@ class __$$HomeCategoryLoadingImplCopyWithImpl<T, $Res>
   __$$HomeCategoryLoadingImplCopyWithImpl(_$HomeCategoryLoadingImpl<T> _value,
       $Res Function(_$HomeCategoryLoadingImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeCategoryState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -347,6 +356,8 @@ class __$$HomeCategorySuccessImplCopyWithImpl<T, $Res>
       $Res Function(_$HomeCategorySuccessImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeCategoryState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -386,7 +397,9 @@ class _$HomeCategorySuccessImpl<T> implements HomeCategorySuccess<T> {
   @override
   int get hashCode => Object.hash(runtimeType, homeCategoryResponse);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HomeCategorySuccessImplCopyWith<T, _$HomeCategorySuccessImpl<T>>
@@ -478,7 +491,10 @@ abstract class HomeCategorySuccess<T> implements HomeCategoryState<T> {
       _$HomeCategorySuccessImpl<T>;
 
   HomeCategoryAndBrandsResponse get homeCategoryResponse;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HomeCategorySuccessImplCopyWith<T, _$HomeCategorySuccessImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -500,6 +516,8 @@ class __$$HomeCategoryErrorImplCopyWithImpl<T, $Res>
       $Res Function(_$HomeCategoryErrorImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeCategoryState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -538,7 +556,9 @@ class _$HomeCategoryErrorImpl<T> implements HomeCategoryError<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HomeCategoryErrorImplCopyWith<T, _$HomeCategoryErrorImpl<T>>
@@ -630,7 +650,10 @@ abstract class HomeCategoryError<T> implements HomeCategoryState<T> {
       _$HomeCategoryErrorImpl<T>;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HomeCategoryErrorImplCopyWith<T, _$HomeCategoryErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

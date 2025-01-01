@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:comamarce/core/units/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:meta/meta.dart';
 import '../../view/category_and_brand_view/category_and_brand_view.dart';
@@ -29,7 +30,7 @@ class AppCubit extends Cubit<AppStateState> {
   List<Widget> appBar = const[
     Text('Home Page1'),
     Text('Order Detials'),
-    Text('Home Page'),
+    Text(''),
     Text('Favorite'),
     Text('My Account'),
   ];
@@ -44,29 +45,41 @@ class AppCubit extends Cubit<AppStateState> {
     const BottomNavigationBarItem(
       icon: Icon(FontAwesomeIcons.box),
       label: '',
+      activeIcon:Icon(FontAwesomeIcons.boxOpen),
     ),
      BottomNavigationBarItem(
-      icon: Image.asset('assets/icons/products.png'),
+      icon: Image.asset('assets/icons/category.png'),
       label: '',
+       activeIcon: Icon(Icons.category_outlined)
     ),
     BottomNavigationBarItem(
       icon: Container(
-          width: 40,
-          height: 40,
+          width: 40.w,
+          height: 40.h,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
               color: AppColors.ofWhiteColor
           ),
           child: Image.asset('assets/icons/home.png',color: Colors.black,))  ,
       label: '',
+      activeIcon: Container(
+          width: 40.w,
+          height: 40.h,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              color: AppColors.ofWhiteColor
+          ),
+          child: Icon(Icons.home))
     ),
      BottomNavigationBarItem(
-      icon: Image.asset('assets/icons/heart.png'),
+      icon: Icon(FontAwesomeIcons.heart),
+       activeIcon: Icon(FontAwesomeIcons.heartCircleCheck),
       label: '',
     ),
      BottomNavigationBarItem(
       icon:Image.asset('assets/icons/user.png'),
       label: '',
+       activeIcon: Icon(FontAwesomeIcons.user)
     ),
   ];
 

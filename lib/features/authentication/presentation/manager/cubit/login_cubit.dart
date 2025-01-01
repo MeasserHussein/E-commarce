@@ -1,32 +1,4 @@
-// import 'package:bloc/bloc.dart';
-// import 'package:comamarce/features/authentication/data/models/login_model/Login_model.dart';
-// import 'package:comamarce/features/authentication/data/repos/auth_repos.dart';
-// import 'package:flutter/cupertino.dart';
-// import 'package:meta/meta.dart';
-//
-// part 'login_state.dart';
-//
-// class OtpCubit extends Cubit<OtpState> {
-//   OtpCubit(this.authRepos) : super(OtpInitial());
-//   final AuthRepos authRepos;
-//   final emailController =TextEditingController();
-//   bool isLoading=false;
-//   Future<void> verify(String otp)async{
-//     isLoading=true;
-//     emit(OtpLoading());
-//     var result= await authRepos.verifyAccount(
-//         email: emailController.text,
-//         otp: otp,
-//     );
-//     result.fold((failure){
-//       isLoading=false;
-//       emit(OtpError(massError: failure.errMassage));
-//     }, (token){
-//       isLoading=false;
-//       emit(OtpSuccess());
-//     });
-//   }
-// }
+
 
 import 'package:comamarce/core/units/dio_factory.dart';
 import 'package:comamarce/core/units/shared/helper/constant.dart';
@@ -39,7 +11,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit(this.loginRepo) : super(LoginInitial());
-  final LoginRepo loginRepo;
+  final LoginRepoImpl loginRepo;
 
   final formKey = GlobalKey<FormState>();
 
@@ -47,7 +19,7 @@ class LoginCubit extends Cubit<LoginState> {
 
   bool isLoading = false;
   final TextEditingController emailController = TextEditingController(text: 'measserhussien35@gmail.com');
-  final TextEditingController passwordController = TextEditingController(text: 'meso123');
+  final TextEditingController passwordController = TextEditingController(text: 'meso1234');
 
   void login(LoginRequestBody user) async {
     isLoading = true;

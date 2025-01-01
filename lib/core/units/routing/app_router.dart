@@ -17,6 +17,8 @@ import 'package:comamarce/features/nav_bar_home/presentation/manager/category_it
 import 'package:comamarce/features/nav_bar_home/presentation/manager/home_category_cubit/home_category_cubit.dart';
 import 'package:comamarce/features/nav_bar_home/presentation/view/category_item_list_view/view/category_items_list_view.dart';
 import 'package:comamarce/features/splash/presentation/view/splash_view.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../../features/authentication/presentation/view/forget_password_view/forget_password_view.dart';
@@ -32,9 +34,10 @@ import '../../../features/nav_bar_home/presentation/view/favorite_view/presentat
 import '../../../features/nav_bar_home/presentation/view/home_nav_bar/view/home_buttom_nav_bar.dart';
 import '../../../features/cart/presentation/views/my_cart_view/my_cart_view.dart';
 import '../../../features/nav_bar_home/presentation/view/my_account/presentation/views/my_account_view.dart';
-import '../../../features/payment/presentation/views/payment_details_view.dart';
+import '../../../features/no_internet_niew/no_internet_view.dart';
 import '../../../features/payment/presentation/views/thank_you_view.dart';
 import '../../../features/setting_profile_view/presentation/view/setting_profile_view.dart';
+import '../../widgets/page_route.dart';
 import 'app_routes.dart';
 
 class AppRouter {
@@ -43,7 +46,12 @@ class AppRouter {
     routes: [
       GoRoute(
           path: AppRoute.splash,
-          builder: (context, state) => const SplashView()),
+          builder: (context, state) => StreamBuilder<ConnectivityResult>(
+              stream: Connectivity().onConnectivityChanged.map((event)=>event.first),
+              builder: (context,snapShot){
+            return snapShot.data==ConnectivityResult.none?  NoInternetView(): const SplashView();
+              }
+          )),
       GoRoute(
           path: AppRoute.login,
           builder: (context, state) => BlocProvider(
@@ -80,33 +88,44 @@ class AppRouter {
               )),
       GoRoute(
           path: AppRoute.home,
-          builder: (context, state) => MultiBlocProvider(providers: [
-                BlocProvider(
-                  create: (context) =>
-                      HomeCategoryCubit(getIt())..getCategory(),
-                ),
-                BlocProvider(
-                  create: (context) => BrandsCubit(getIt())..getBrands(),
-                ),
-                BlocProvider(
-                  create: (context) => ProductCubit(getIt())..getProduct(),
-                ),
-                BlocProvider(
-                  create: (context) => AddToCartCubit(getIt()),
-                ),
-                BlocProvider(
-                  create: (context) => FavoriteCubit(getIt())
-                    ..getFavorite(SharedPrefKeys.userToken),
-                ),
-                BlocProvider(
-                  create: (context) =>
-                      LoginCubit(getIt())..getToken(SharedPrefKeys.userToken),
-                ),
-                BlocProvider(
-                  create: (context) =>
-                      CashOrderCubit(getIt())..getOrders(SharedPrefKeys.userId),
-                ),
-              ], child: const HomeButtonNavBar())),
+          builder: (context, state) => StreamBuilder<ConnectivityResult>(
+            stream:Connectivity().onConnectivityChanged.map((event)=>event.first),
+            builder: (context,snapShot){
+              return snapShot.data==ConnectivityResult.none ? AnimatedNoInternetView(
+                beginOffset: Offset(-1, 0),
+                child: NoInternetView(),
+              ):MultiBlocProvider(
+                providers: [
+                  BlocProvider(
+                    create: (context) =>
+                    HomeCategoryCubit(getIt())..getCategory(),
+                  ),
+                  BlocProvider(
+                    create: (context) => BrandsCubit(getIt())..getBrands(),
+                  ),
+                  BlocProvider(
+                    create: (context) => ProductCubit(getIt())..getProduct(),
+                  ),
+                  BlocProvider(
+                    create: (context) => AddToCartCubit(getIt()),
+                  ),
+                  BlocProvider(
+                    create: (context) => FavoriteCubit(getIt())
+                      ..getFavorite(SharedPrefKeys.userToken),
+                  ),
+                  BlocProvider(
+                    create: (context) =>
+                    LoginCubit(getIt())..getToken(SharedPrefKeys.userToken),
+                  ),
+                  BlocProvider(
+                    create: (context) =>
+                    CashOrderCubit(getIt())..getOrders(SharedPrefKeys.userId),
+                  ),
+                ],
+                  child: HomeButtonNavBar());
+            },
+          )
+      ),
       GoRoute(
           path: AppRoute.detailsView,
           builder: (context, state) => MultiBlocProvider(
@@ -158,9 +177,9 @@ class AppRouter {
                 ],
                 child: const AntherCardView(),
               )),
-      GoRoute(
-          path: AppRoute.paymentDetails,
-          builder: (context, state) => const PaymentDetailsView()),
+      // GoRoute(
+      //     path: AppRoute.paymentDetails,
+      //     builder: (context, state) => const PaymentDetailsView()),
       GoRoute(
           path: AppRoute.thankYou,
           builder: (context, state) => const ThankYouView()),

@@ -84,6 +84,9 @@ class _$ProductStateCopyWithImpl<T, $Res, $Val extends ProductState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -100,6 +103,9 @@ class __$$InitialImplCopyWithImpl<T, $Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -214,6 +220,9 @@ class __$$ProductLoadingImplCopyWithImpl<T, $Res>
   __$$ProductLoadingImplCopyWithImpl(_$ProductLoadingImpl<T> _value,
       $Res Function(_$ProductLoadingImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -331,6 +340,8 @@ class __$$ProductSuccessImplCopyWithImpl<T, $Res>
       $Res Function(_$ProductSuccessImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -370,7 +381,9 @@ class _$ProductSuccessImpl<T> implements ProductSuccess<T> {
   @override
   int get hashCode => Object.hash(runtimeType, productResponse);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ProductSuccessImplCopyWith<T, _$ProductSuccessImpl<T>> get copyWith =>
@@ -458,7 +471,10 @@ abstract class ProductSuccess<T> implements ProductState<T> {
       _$ProductSuccessImpl<T>;
 
   ProductResponse get productResponse;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ProductSuccessImplCopyWith<T, _$ProductSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -480,6 +496,8 @@ class __$$ProductErrorImplCopyWithImpl<T, $Res>
       _$ProductErrorImpl<T> _value, $Res Function(_$ProductErrorImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -518,7 +536,9 @@ class _$ProductErrorImpl<T> implements ProductError<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ProductErrorImplCopyWith<T, _$ProductErrorImpl<T>> get copyWith =>
@@ -605,7 +625,10 @@ abstract class ProductError<T> implements ProductState<T> {
       _$ProductErrorImpl<T>;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ProductErrorImplCopyWith<T, _$ProductErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

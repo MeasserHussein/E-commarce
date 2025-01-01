@@ -27,7 +27,7 @@ class CashOrderCubit extends Cubit<CashOrderState> {
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController cityController = TextEditingController();
 
-  void getOrders(String userId)async{
+  Future<void> getOrders(String userId)async{
     emit(const CashOrderState.orderLoading());
     userId =await SharedPrefHelper.getSecuredString(SharedPrefKeys.userId);
     var response = await _cashOrderRepo.getOrders(userId);

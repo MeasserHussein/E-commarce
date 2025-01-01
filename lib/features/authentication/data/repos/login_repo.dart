@@ -8,10 +8,10 @@ import 'package:comamarce/features/authentication/data/models/verify_token/verif
 
 
 
-class LoginRepo{
+class LoginRepoImpl{
   final ApiService apiService;
 
-  LoginRepo(this.apiService);
+  LoginRepoImpl(this.apiService);
 
   Future<ApiResult<LoginResponse>> loginUser(LoginRequestBody user) async{
     try{

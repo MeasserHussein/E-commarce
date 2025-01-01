@@ -90,6 +90,9 @@ class _$CategoryItemsStateCopyWithImpl<T, $Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of CategoryItemsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,6 +109,9 @@ class __$$InitialImplCopyWithImpl<T, $Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of CategoryItemsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -226,6 +232,9 @@ class __$$CategoryItemLoadingImplCopyWithImpl<T, $Res>
   __$$CategoryItemLoadingImplCopyWithImpl(_$CategoryItemLoadingImpl<T> _value,
       $Res Function(_$CategoryItemLoadingImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of CategoryItemsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -350,6 +359,8 @@ class __$$CategoryItemSuccessImplCopyWithImpl<T, $Res>
       $Res Function(_$CategoryItemSuccessImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of CategoryItemsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -389,7 +400,9 @@ class _$CategoryItemSuccessImpl<T> implements CategoryItemSuccess<T> {
   @override
   int get hashCode => Object.hash(runtimeType, categoryItems);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CategoryItemsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CategoryItemSuccessImplCopyWith<T, _$CategoryItemSuccessImpl<T>>
@@ -482,7 +495,10 @@ abstract class CategoryItemSuccess<T> implements CategoryItemsState<T> {
       _$CategoryItemSuccessImpl<T>;
 
   HomeCategoryAndBrandsResponse get categoryItems;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CategoryItemsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoryItemSuccessImplCopyWith<T, _$CategoryItemSuccessImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -505,6 +521,8 @@ class __$$CategoryItemErrorImplCopyWithImpl<T, $Res>
       $Res Function(_$CategoryItemErrorImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of CategoryItemsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -543,7 +561,9 @@ class _$CategoryItemErrorImpl<T> implements CategoryItemError<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CategoryItemsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CategoryItemErrorImplCopyWith<T, _$CategoryItemErrorImpl<T>>
@@ -636,7 +656,10 @@ abstract class CategoryItemError<T> implements CategoryItemsState<T> {
       _$CategoryItemErrorImpl<T>;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CategoryItemsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoryItemErrorImplCopyWith<T, _$CategoryItemErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

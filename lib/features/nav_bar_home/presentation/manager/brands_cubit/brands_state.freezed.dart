@@ -87,6 +87,9 @@ class _$BrandsStateCopyWithImpl<T, $Res, $Val extends BrandsState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of BrandsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -103,6 +106,9 @@ class __$$InitialImplCopyWithImpl<T, $Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of BrandsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -220,6 +226,9 @@ class __$$BrandsLoadingImplCopyWithImpl<T, $Res>
   __$$BrandsLoadingImplCopyWithImpl(_$BrandsLoadingImpl<T> _value,
       $Res Function(_$BrandsLoadingImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of BrandsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -340,6 +349,8 @@ class __$$BrandsSuccessImplCopyWithImpl<T, $Res>
       $Res Function(_$BrandsSuccessImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of BrandsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -379,7 +390,9 @@ class _$BrandsSuccessImpl<T> implements BrandsSuccess<T> {
   @override
   int get hashCode => Object.hash(runtimeType, brandsResponse);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BrandsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BrandsSuccessImplCopyWith<T, _$BrandsSuccessImpl<T>> get copyWith =>
@@ -470,7 +483,10 @@ abstract class BrandsSuccess<T> implements BrandsState<T> {
       _$BrandsSuccessImpl<T>;
 
   HomeCategoryAndBrandsResponse get brandsResponse;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BrandsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BrandsSuccessImplCopyWith<T, _$BrandsSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -492,6 +508,8 @@ class __$$BrandsErrorImplCopyWithImpl<T, $Res>
       _$BrandsErrorImpl<T> _value, $Res Function(_$BrandsErrorImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of BrandsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -530,7 +548,9 @@ class _$BrandsErrorImpl<T> implements BrandsError<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BrandsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BrandsErrorImplCopyWith<T, _$BrandsErrorImpl<T>> get copyWith =>
@@ -620,7 +640,10 @@ abstract class BrandsError<T> implements BrandsState<T> {
       _$BrandsErrorImpl<T>;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BrandsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BrandsErrorImplCopyWith<T, _$BrandsErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -84,6 +84,9 @@ class _$OtpCodeStateCopyWithImpl<T, $Res, $Val extends OtpCodeState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of OtpCodeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -100,6 +103,9 @@ class __$$InitialImplCopyWithImpl<T, $Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of OtpCodeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -214,6 +220,9 @@ class __$$OtpLoadingImplCopyWithImpl<T, $Res>
   __$$OtpLoadingImplCopyWithImpl(
       _$OtpLoadingImpl<T> _value, $Res Function(_$OtpLoadingImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of OtpCodeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -331,6 +340,8 @@ class __$$OtpSuccessImplCopyWithImpl<T, $Res>
       _$OtpSuccessImpl<T> _value, $Res Function(_$OtpSuccessImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of OtpCodeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -370,7 +381,9 @@ class _$OtpSuccessImpl<T> implements OtpSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OtpCodeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OtpSuccessImplCopyWith<T, _$OtpSuccessImpl<T>> get copyWith =>
@@ -455,7 +468,10 @@ abstract class OtpSuccess<T> implements OtpCodeState<T> {
   const factory OtpSuccess(final T data) = _$OtpSuccessImpl<T>;
 
   T get data;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of OtpCodeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OtpSuccessImplCopyWith<T, _$OtpSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -477,6 +493,8 @@ class __$$OtpErrorImplCopyWithImpl<T, $Res>
       _$OtpErrorImpl<T> _value, $Res Function(_$OtpErrorImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of OtpCodeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -515,7 +533,9 @@ class _$OtpErrorImpl<T> implements OtpError<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OtpCodeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OtpErrorImplCopyWith<T, _$OtpErrorImpl<T>> get copyWith =>
@@ -600,7 +620,10 @@ abstract class OtpError<T> implements OtpCodeState<T> {
   const factory OtpError({required final String error}) = _$OtpErrorImpl<T>;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of OtpCodeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OtpErrorImplCopyWith<T, _$OtpErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

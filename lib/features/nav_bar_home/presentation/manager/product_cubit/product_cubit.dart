@@ -7,7 +7,7 @@ class ProductCubit extends Cubit<ProductState> {
 
   final ProductRepo _productRepo;
 
-  void getProduct()async{
+  Future<void> getProduct()async{
     emit(const ProductState.productLoading());
     var response = await _productRepo.getProduct();
     response.when(success: (productResponse){

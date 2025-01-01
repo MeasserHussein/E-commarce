@@ -14,7 +14,7 @@ BottomNavigationBar customBottomNavigationBar(AppCubit cubit) {
     type: BottomNavigationBarType.fixed,
     currentIndex:cubit.currentIndex,
     elevation: 0,
-    selectedItemColor: Colors.white,
+    selectedItemColor: Colors.orange,
     selectedFontSize: 0,
     unselectedItemColor: Colors.white,
   );

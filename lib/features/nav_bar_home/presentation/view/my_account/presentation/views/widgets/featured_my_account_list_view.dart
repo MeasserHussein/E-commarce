@@ -4,7 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../../../../core/units/routing/app_routes.dart';
+import '../../../../../../../../core/units/shared/helper/constant.dart';
+import '../../../../../../../../core/units/shared/helper/shared_pref_helper.dart';
 import '../../../../../manager/app_state_cubit/app_state_cubit.dart';
 import 'app_icon_and_text_container.dart';
 
@@ -47,7 +50,7 @@ class FeaturedMyAccountListView extends StatelessWidget {
                 },
                 child:  AppIconAndTextContainer(
                   text: 'Products',
-                  image: Image.asset('assets/icons/products.png',color: Colors.white,),
+                  image: Image.asset('assets/icons/category.png',color: Colors.white,),
                   backgroundColor: AppColors.primaryBlueColor,
                 ),
               ),
@@ -65,6 +68,15 @@ class FeaturedMyAccountListView extends StatelessWidget {
                SizedBox(height: 7.h,),
               GestureDetector(
                 onTap: () {
+                  // Future<void> deleteToken() async {
+                  //   final prefs = await SharedPreferences.getInstance();
+                  //   await prefs.remove(SharedPrefKeys.userToken);
+                  // }
+                  // deleteToken();
+                  // SharedPrefHelper.clearAllData();
+                  // SharedPrefHelper.clearAllSecuredData();
+                  SharedPrefHelper.removeData(SharedPrefKeys.userToken);
+                  SharedPrefHelper.removeData(SharedPrefKeys.userId);
                   context.go(AppRoute.login);
                 },
                 child: const AppIconAndTextContainer(

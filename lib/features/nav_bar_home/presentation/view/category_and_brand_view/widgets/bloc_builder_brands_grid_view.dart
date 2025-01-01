@@ -17,7 +17,6 @@ class BlocBuilderBrandsGridView extends StatelessWidget {
         return state.maybeWhen(
          // brandsLoading: ()=>const Center(child: CircularProgressIndicator(color: AppColors.primaryBlueColor,),),
             brandsSuccess: ( brand){
-              context.read<LoginCubit>().getToken(SharedPrefKeys.userToken);
             var brandsList = brand.data!;
             return  BrandGridViewBuilder(
               imagesBrand:brandsList,

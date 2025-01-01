@@ -12,7 +12,7 @@ class Assets {
   static const String imagesLogo = 'assets/images/logo.svg';
   static const String imagesMarketing = 'assets/images/marketing.avif';
   static const String imagesOtp = 'assets/images/otp.png';
-  static const String imagesPaypal = 'assets/images/paypal.svg';
+  static const String imagesPaypal = 'assets/images/book2.png';
   static const String imagesVisa = 'assets/images/visa.svg';
 
 }

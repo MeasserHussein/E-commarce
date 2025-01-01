@@ -10,7 +10,6 @@ class CategoryItemsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        physics: const NeverScrollableScrollPhysics(),
         itemCount: dataCategory.length,
         itemBuilder: (context, index) {
           return CategoryItem(dataCategory: dataCategory[index]!);
